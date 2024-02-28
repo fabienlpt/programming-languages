@@ -77,7 +77,9 @@ if (!class_exists('ProgrammingLanguages') && class_exists('ACF')) :
                 // Add plugin shortcode
                 function languages_list()
                 {
+                    ob_start();
                     include 'includes/templates/languages-list.php';
+                    return ob_get_clean();
                 }
                 add_shortcode('programmingLanguagesList', 'languages_list');
             }
