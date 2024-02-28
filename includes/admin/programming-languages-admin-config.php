@@ -35,8 +35,8 @@ class ProgrammingLanguagesAdminConfig
             'parent_item_colon'     => __( 'Parent Programming Languages:', 'textdomain' ),
             'not_found'             => __( 'No programming languages found.', 'textdomain' ),
             'not_found_in_trash'    => __( 'No programming languages found in Trash.', 'textdomain' ),
-            'featured_image'        => _x( 'Programming Language Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
-            'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
+            'featured_image'        => _x( 'Logo', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+            'set_featured_image'    => _x( 'Selectionner un logo', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
             'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
             'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'textdomain' ),
             'archives'              => _x( 'Programming Language archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'textdomain' ),
@@ -45,6 +45,7 @@ class ProgrammingLanguagesAdminConfig
             'filter_items_list'     => _x( 'Filter programming languages list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'textdomain' ),
             'items_list_navigation' => _x( 'Programming Languages list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'textdomain' ),
             'items_list'            => _x( 'Programming Languages list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'textdomain' ),
+            'item_link_description' => _x( 'Programming Language link description', 'Screen reader text for the “Item” link text. Added in 4.4', 'textdomain' ),
         );
 
         $args = array(
@@ -54,15 +55,16 @@ class ProgrammingLanguagesAdminConfig
             'show_ui'            => true,
             'show_in_menu'       => true,
             'query_var'          => true,
-            'rewrite'            => array( 'slug' => 'programming-language' ),
+            'menu_icon'           => 'dashicons-media-code',
+            'rewrite'            => array( 'slug' => 'language' ),
             'capability_type'    => 'post',
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+            'supports'           => array( 'title', 'thumbnail', 'excerpt' ),
         );
 
-        register_post_type( 'programming-languages', $args );
+        register_post_type( 'languages', $args );
     }
 }
 new ProgrammingLanguagesAdminConfig;
