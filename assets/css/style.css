@@ -48,7 +48,7 @@ body {
 .programming_language-title {
   margin: 0;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1;
   letter-spacing: 2px;
   font-size: 2rem;
   text-transform: capitalize;
@@ -58,9 +58,10 @@ body {
   margin: 0;
   font-size: 14px;
   max-width: 250px;
-  font-family: "NTR", sans-serif;
+  font-family: "NTR", sans-serif !important;
   max-height: 110px;
   height: 100%;
+  line-height: 1;
 }
 
 .programming_language-link {
