@@ -17,7 +17,9 @@ if(!$elements->have_posts()) {
     <!-- Composant -->
     <?php foreach ($elements->posts as $element){ ?>
     <div class="programming_language">
-        <img class="programming_language-image" src="<?= get_the_post_thumbnail_url($element->ID) ?>" alt="Js">
+        <a href="<?= get_the_permalink($element->ID) ?>">
+            <img class="programming_language-image" src="<?= get_the_post_thumbnail_url($element->ID) ?>" alt="Image <?= $element->post_title ?>" />
+        </a>
         <div class="programming_language-wrapper">
             <p class="programming_language-title">
                 <?= $element->post_title ?>

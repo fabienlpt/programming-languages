@@ -92,7 +92,7 @@ if (!class_exists('ProgrammingLanguages') && class_exists('ACF')) :
         global $post;
 
         /* Checks for single template by post type */
-        if ($post->post_type == 'programming-languages') {
+        if ($post->post_type == 'languages') {
             if (file_exists(plugin_dir_path(__FILE__) . '/includes/templates/single-programming-languages.php')) {
                 return plugin_dir_path(__FILE__) . '/includes/templates/single-programming-languages.php';
             }
